@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gallery</title>
+        <style>
+            body{
+                background-color: rgb(213, 136, 161);
+                font-family: 'Courier New', Courier, monospace;
+            }
+            h1{
+                color: rebeccapurple;
+                font-size: 70px;
+            }
+            img {
+                display: block;
+                margin: 0 auto;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+        </style>
+    </head>
+    
+    <body>
+        <h1>Gallery</h1>
+        <section>
+            <img class="mySlides" src="BIRD.jpg" style="height: 500px;";>
+            <img class="mySlides" src="duck.jpg" style="height: 500px;";>
+            <img class="mySlides" src="dog.jpg" style="height: 500px;";>
+            <img class="mySlides" src="cat.jpg" style="height: 500px;";>
+            <img class="mySlides" src="horse.jpg" style="height: 500px;";>   
+            <img class="mySlides" src="ferrets.jpg" style="height: 500px;";>
+            <img class="mySlides" src="fish.jpg" style="height: 500px;";>
+            <img class="mySlides" src="panda.jpg" style="height: 500px;";>
+            <img class="mySlides" src="Penguins.jpeg" style="height: 500px;";>
+            <img class="mySlides" src="turtle.jpg" style="height: 500px;";>
+            <img class="mySlides" src="unicorn.jpg" style="height: 500px;";>
+
+        </section>
+        <script>
+            var myTndex = 0;
+            carousel();
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                }
+                myTndex++;
+                if (myTndex > x.length) {myTndex = 1}    
+                x[myTndex-1].style.display = "block";  
+                setTimeout(carousel, 3000);
+            }
+        </script>
+
+       
+
+    </body>
+    
+</html>
